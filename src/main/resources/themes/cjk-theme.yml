@@ -110,14 +110,20 @@ header:
   font_size: 9
   font_family: MicrosoftYaHei
   line_height: 1
-  height: 30
+  height: 40
   vertical_align: middle
+  border_color: e0e0e0
+  border_width: 0.5
   recto:
+    left:
+      content: '{document-title}'
     right:
       content: '{chapter-title}'
   verso:
     left:
       content: '{document-title}'
+    right:
+      content: '{chapter-title}'
 
 footer:
   font_size: 9
