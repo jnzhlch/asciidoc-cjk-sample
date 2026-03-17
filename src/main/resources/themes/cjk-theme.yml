@@ -100,7 +100,7 @@ title_page:
     margin_top: 13
 
 link:
-  font_color: 428bca
+  font_color: 1a5490
 
 outline_list:
   indent: 16
