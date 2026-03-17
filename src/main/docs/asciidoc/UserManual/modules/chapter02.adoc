@@ -198,3 +198,11 @@ DROP USER 'app_user'@'localhost';
 ====
 卸载前请备份重要数据！
 ====
+
+=== 安装流程
+
+image::chapter02/flowchart.png[安装流程图,600]
+
+=== 配置示例
+
+image::chapter02/example.png[配置示例,600]
