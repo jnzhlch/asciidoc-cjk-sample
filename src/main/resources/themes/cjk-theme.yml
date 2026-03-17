@@ -57,15 +57,15 @@ horizontal_rhythm: 12
 
 heading:
   align: left
-  font_color: 181818
+  font_color: 1a5490
   font_family: MicrosoftYaHei
   font_style: bold
-  h1_font_size: 27
-  h2_font_size: 22
-  h3_font_size: 18
-  h4_font_size: 13
-  h5_font_size: 10.5
-  h6_font_size: 9
+  h1_font_size: 28
+  h2_font_size: 24
+  h3_font_size: 20
+  h4_font_size: 16
+  h5_font_size: 13
+  h6_font_size: 11
   line_height: 1.2
   margin_top: 5
   margin_bottom: 10
