@@ -159,14 +159,14 @@ conum:
 
 table:
   background_color: ffffff
-  head_background_color: f0f0f0
-  head_font_color: 333333
+  head_background_color: f0f4f8
+  head_font_color: 1a5490
   head_font_style: bold
   head_font_family: MicrosoftYaHei
   body_background_color: ffffff
   body_stripe_background_color: fafafa
-  foot_background_color: f0f0f0
-  border_color: dddddd
+  foot_background_color: f0f4f8
+  border_color: e0e0e0
   border_width: 0.5
   cell_padding: [3, 3, 6, 3]
 
