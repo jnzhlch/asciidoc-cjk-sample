@@ -1,0 +1,44 @@
+=== 术语表
+
+本附录列出了文档中使用的专业术语及其定义。
+
+[glossary]
+API:: 应用程序编程接口（Application Programming Interface）。一组定义了软件组件之间交互的规则和协议。
+
+CLI:: 命令行界面（Command Line Interface）。通过文本命令与计算机程序交互的用户界面。
+
+GUI:: 图形用户界面（Graphical User Interface）。使用图形元素（如窗口、图标、按钮）与用户交互的界面。
+
+REST:: 表述性状态传递（Representational State Transfer）。一种软件架构风格，用于设计网络应用程序。
+
+JSON:: JavaScript对象表示法（JavaScript Object Notation）。一种轻量级的数据交换格式。
+
+XML:: 可扩展标记语言（Extensible Markup Language）。一种用于存储和传输数据的标记语言。
+
+HTTP:: 超文本传输协议（Hypertext Transfer Protocol）。用于在Web上传输数据的协议。
+
+HTTPS:: 安全超文本传输协议（Hypertext Transfer Protocol Secure）。HTTP的安全版本，使用SSL/TLS加密。
+
+SQL:: 结构化查询语言（Structured Query Language）。用于管理关系数据库的标准语言。
+
+NoSQL:: 非关系型数据库（Not Only SQL）。不使用传统关系型数据库表结构的数据库系统。
+
+ORM:: 对象关系映射（Object-Relational Mapping）。在面向对象编程语言中操作关系数据库的技术。
+
+MVC:: 模型-视图-控制器（Model-View-Controller）。一种软件设计模式，用于分离应用程序的数据、用户界面和控制逻辑。
+
+JWT:: JSON Web Token。一种用于在网络应用环境间安全传递信息的开放标准。
+
+OAuth:: 开放授权（Open Authorization）。一个开放标准，允许用户授权第三方应用访问其资源。
+
+SSL/TLS:: 安全套接字层/传输层安全（Secure Sockets Layer/Transport Layer Security）。用于在网络上提供安全通信的加密协议。
+
+CDN:: 内容分发网络（Content Delivery Network）。一组分布在不同地理位置的服务器，用于更快地向用户提供内容。
+
+DNS:: 域名系统（Domain Name System）。将域名转换为IP地址的系统。
+
+IP:: 互联网协议（Internet Protocol）。用于在网络上路由和寻址数据包的协议。
+
+TCP:: 传输控制协议（Transmission Control Protocol）。一种面向连接的、可靠的传输层协议。
+
+UDP:: 用户数据报协议（User Datagram Protocol）。一种无连接的传输层协议。

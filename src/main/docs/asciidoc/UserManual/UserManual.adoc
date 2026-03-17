@@ -1,0 +1,87 @@
+= 用户手册
+:doctype: book
+:encoding: utf-8
+:lang: zh-CN
+:toc: left
+:toclevels: 3
+:sectnums:
+:chapter-prefix: 第
+:chapter-suffix: 章
+:sectnumlevels: 3
+:sectnumoffset: 1
+:chapter-label: 章
+
+:sectanchors:
+:icons: font
+:source-highlighter: highlight.js
+:imagesdir: images
+:version: 1.0.0
+:author: 作者姓名
+:email: author@example.com
+:revnumber: {version}
+:revdate: {docdate}
+:revremark: 初始版本
+:appendix-caption: 附录
+:figure-caption: 图
+:table-caption: 表
+:example-caption: 例
+:toc-title: 目录
+:note-caption: 注意
+:tip-caption: 提示
+:warning-caption: 警告
+:caution-caption: 小心
+:important-caption: 重要
+:last-update-label: 最后更新
+:untitled-label: 无标题
+:version-label: 版本
+
+[preface]
+== 前言
+
+本文档是系统用户手册，旨在帮助用户快速了解和使用本系统。
+
+=== 文档目的
+
+本手册提供了系统的完整使用说明，包括：
+
+* 系统概述和功能介绍
+* 安装和配置指南
+* 详细的操作说明
+* 常见问题解答
+
+=== 目标读者
+
+本手册适用于以下读者：
+
+* 系统管理员
+* 最终用户
+* 技术支持人员
+
+=== 文档约定
+
+本文档使用以下约定：
+
+[NOTE]
+====
+这是一个提示信息，用于提供额外的说明。
+====
+
+[WARNING]
+====
+这是一个警告信息，用于提醒用户注意重要事项。
+====
+
+[TIP]
+====
+这是一个技巧提示，用于分享最佳实践。
+====
+
+include::modules/chapter01.adoc[]
+
+include::modules/chapter02.adoc[]
+
+== 附录
+
+include::modules/appendix-a.adoc[]
+
+include::modules/appendix-b.adoc[]

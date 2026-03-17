@@ -1,0 +1,91 @@
+=== 参考资料
+
+本附录提供了相关的参考资料和学习资源。
+
+==== 官方文档
+
+* https://asciidoctor.org/[Asciidoctor官方网站] - Asciidoctor项目的官方网站
+* https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc语法指南] - 完整的AsciiDoc语法参考
+* https://docs.asciidoctor.org/asciidoctor/latest/[Asciidoctor用户手册] - Asciidoctor的详细使用指南
+* https://docs.asciidoctor.org/pdf-converter/latest/[Asciidoctor PDF文档] - PDF生成器的官方文档
+
+==== 技术规范
+
+* https://www.w3.org/TR/html5/[HTML5规范] - W3C HTML5标准
+* https://www.ecma-international.org/publications-and-standards/standards/ecma-262/[ECMAScript规范] - JavaScript语言规范
+* https://www.rfc-editor.org/rfc/rfc7231[HTTP/1.1规范] - HTTP协议规范
+* https://datatracker.ietf.org/doc/html/rfc8259[JSON规范] - JSON数据格式规范
+
+==== 开发工具
+
+* https://maven.apache.org/[Apache Maven] - 项目管理和构建工具
+* https://git-scm.com/[Git] - 分布式版本控制系统
+* https://www.docker.com/[Docker] - 容器化平台
+* https://kubernetes.io/[Kubernetes] - 容器编排平台
+
+==== 学习资源
+
+===== 在线教程
+
+* https://www.baeldung.com/[Baeldung] - Java和Spring框架教程
+* https://www.tutorialspoint.com/[TutorialsPoint] - 各种编程语言和技术教程
+* https://www.w3schools.com/[W3Schools] - Web开发教程
+* https://developer.mozilla.org/[MDN Web Docs] - Web技术文档和教程
+
+===== 书籍推荐
+
+[cols="2,3,2", options="header"]
+|===
+|书名
+|作者
+|出版社
+
+|《Effective Java》
+|Joshua Bloch
+|Addison-Wesley
+
+|《Clean Code》
+|Robert C. Martin
+|Prentice Hall
+
+|《Design Patterns》
+|Gang of Four
+|Addison-Wesley
+
+|《Refactoring》
+|Martin Fowler
+|Addison-Wesley
+|===
+
+===== 视频课程
+
+* https://www.coursera.org/[Coursera] - 在线课程平台
+* https://www.udemy.com/[Udemy] - 在线学习平台
+* https://www.pluralsight.com/[Pluralsight] - 技术技能学习平台
+* https://www.linkedin.com/learning/[LinkedIn Learning] - 专业技能学习平台
+
+==== 社区资源
+
+* https://stackoverflow.com/[Stack Overflow] - 程序员问答社区
+* https://github.com/[GitHub] - 代码托管和协作平台
+* https://dev.to/[DEV Community] - 开发者社区
+* https://www.reddit.com/r/programming/[Reddit Programming] - 编程讨论社区
+
+==== 技术博客
+
+* https://martinfowler.com/[Martin Fowler's Blog] - 软件开发和架构
+* https://blog.cleancoder.com/[Uncle Bob's Blog] - 软件工程最佳实践
+* https://www.joelonsoftware.com/[Joel on Software] - 软件开发管理
+* https://blog.codinghorror.com/[Coding Horror] - 编程和软件开发
+
+==== 标准和规范
+
+* https://www.iso.org/[ISO] - 国际标准化组织
+* https://www.ietf.org/[IETF] - 互联网工程任务组
+* https://www.w3.org/[W3C] - 万维网联盟
+* https://www.oasis-open.org/[OASIS] - 结构化信息标准促进组织
+
+[NOTE]
+====
+以上资源链接在文档编写时有效，但可能会随时间变化。建议通过搜索引擎查找最新的资源链接。
+====

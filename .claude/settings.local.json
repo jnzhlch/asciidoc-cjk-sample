@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(set:*)",
+      "Bash(python:*)",
+      "Bash(chcp:*)",
+      "Bash(mvn help:describe -Dcmd=asciidoctor:process-asciidoc)",
+      "Bash(mvn asciidoctor:process-asciidoc@generate-UserManual-html)",
+      "Bash(mvn asciidoctor:process-asciidoc@generate-UserManual-pdf)",
+      "mcp__plugin_github_github__get_me"
+    ]
+  }
+}

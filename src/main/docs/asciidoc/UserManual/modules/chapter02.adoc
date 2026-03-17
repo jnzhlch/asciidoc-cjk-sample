@@ -1,0 +1,200 @@
+== 第{counter:chapter}章 安装与配置
+
+本章介绍系统的安装步骤和配置方法。
+
+=== 系统要求
+
+在安装系统之前，请确保满足以下要求：
+
+==== 硬件要求
+
+[cols="1,2", options="header"]
+|===
+|项目
+|最低要求
+
+|CPU
+|2核心 2.0GHz
+
+|内存
+|4GB RAM
+
+|硬盘
+|20GB 可用空间
+
+|网络
+|100Mbps
+|===
+
+==== 软件要求
+
+* 操作系统：Windows 10/11, Linux (Ubuntu 20.04+), macOS 10.15+
+* Java运行环境：JDK 11 或更高版本
+* 数据库：MySQL 8.0 或更高版本
+* 浏览器：Chrome 90+, Firefox 88+, Safari 14+
+
+=== 安装步骤
+
+按照以下步骤安装系统：
+
+==== 步骤1：准备环境
+
+. 安装Java开发工具包（JDK）
++
+[source,bash]
+----
+# Linux/macOS
+sudo apt install openjdk-11-jdk
+
+# 验证安装
+java -version
+----
+
+. 安装MySQL数据库
++
+[source,bash]
+----
+# Linux
+sudo apt install mysql-server
+
+# 启动MySQL服务
+sudo systemctl start mysql
+----
+
+==== 步骤2：下载安装包
+
+从官方网站下载最新版本的安装包：
+
+[source,bash]
+----
+# 使用wget下载
+wget https://example.com/downloads/app-1.0.0.zip
+
+# 解压安装包
+unzip app-1.0.0.zip
+cd app-1.0.0
+----
+
+==== 步骤3：配置数据库
+
+创建数据库和用户：
+
+[source,sql]
+----
+-- 创建数据库
+CREATE DATABASE app_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- 创建用户
+CREATE USER 'app_user'@'localhost' IDENTIFIED BY 'secure_password';
+
+-- 授权
+GRANT ALL PRIVILEGES ON app_db.* TO 'app_user'@'localhost';
+FLUSH PRIVILEGES;
+----
+
+==== 步骤4：配置应用
+
+编辑配置文件 `config/application.properties`：
+
+[source,properties]
+----
+# 数据库配置
+spring.datasource.url=jdbc:mysql://localhost:3306/app_db
+spring.datasource.username=app_user
+spring.datasource.password=secure_password
+
+# 服务器配置
+server.port=8080
+
+# 日志配置
+logging.level.root=INFO
+logging.file.name=logs/application.log
+----
+
+==== 步骤5：启动应用
+
+运行启动脚本：
+
+[source,bash]
+----
+# Linux/macOS
+./bin/startup.sh
+
+# Windows
+bin\startup.bat
+----
+
+=== 验证安装
+
+安装完成后，通过以下方式验证：
+
+. 打开浏览器访问：http://localhost:8080
+. 使用默认账号登录：
+** 用户名：`admin`
+** 密码：`admin123`
+
+[WARNING]
+====
+首次登录后请立即修改默认密码！
+====
+
+=== 常见问题
+
+==== 端口被占用
+
+如果8080端口已被占用，可以修改配置文件中的端口号：
+
+[source,properties]
+----
+server.port=8081
+----
+
+==== 数据库连接失败
+
+检查以下事项：
+
+* [ ] MySQL服务是否正常运行
+* [ ] 数据库用户名和密码是否正确
+* [ ] 防火墙是否允许数据库连接
+* [ ] 数据库URL是否正确
+
+==== 内存不足
+
+如果遇到内存不足错误，可以增加JVM堆内存：
+
+[source,bash]
+----
+# 编辑启动脚本，添加JVM参数
+export JAVA_OPTS="-Xms512m -Xmx2048m"
+----
+
+=== 卸载说明
+
+如需卸载系统：
+
+. 停止应用服务
++
+[source,bash]
+----
+./bin/shutdown.sh
+----
+
+. 删除应用目录
++
+[source,bash]
+----
+rm -rf /path/to/app
+----
+
+. （可选）删除数据库
++
+[source,sql]
+----
+DROP DATABASE app_db;
+DROP USER 'app_user'@'localhost';
+----
+
+[TIP]
+====
+卸载前请备份重要数据！
+====

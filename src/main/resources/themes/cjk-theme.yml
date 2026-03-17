@@ -1,0 +1,272 @@
+font:
+  catalog:
+    # 思源宋体 - 用于正文
+    NotoSerif:
+      normal: NotoSerifSC-VF.ttf
+      bold: NotoSerifSC-VF.ttf
+      italic: NotoSerifSC-VF.ttf
+      bold_italic: NotoSerifSC-VF.ttf
+    # 微软雅黑 - 用于标题和强调
+    MicrosoftYaHei:
+      normal: msyh.ttc
+      bold: msyhbd.ttc
+      italic: msyh.ttc
+      bold_italic: msyhbd.ttc
+    # 微软雅黑细体 - 用于特殊场景
+    MicrosoftYaHeiLight:
+      normal: msyhl.ttc
+      bold: msyh.ttc
+      italic: msyhl.ttc
+      bold_italic: msyh.ttc
+    # 代码字体 - 使用微软雅黑
+    CodeFont:
+      normal: msyh.ttc
+      bold: msyhbd.ttc
+      italic: msyh.ttc
+      bold_italic: msyhbd.ttc
+  fallbacks:
+    - NotoSerif
+    - MicrosoftYaHei
+
+page:
+  background_color: ffffff
+  layout: portrait
+  margin: [2cm, 2cm, 2cm, 2cm]
+  size: A4
+
+base:
+  align: justify
+  font_color: 333333
+  font_family: NotoSerif
+  font_size: 10.5
+  line_height_length: 12
+  line_height: 1.15
+  font_size_large: 13
+  font_size_small: 9
+  font_size_min: 8
+  font_style: normal
+  border_color: eeeeee
+  border_radius: 4
+  border_width: 0.5
+
+text:
+  align: justify
+
+vertical_rhythm: 12
+horizontal_rhythm: 12
+
+heading:
+  align: left
+  font_color: 181818
+  font_family: MicrosoftYaHei
+  font_style: bold
+  h1_font_size: 27
+  h2_font_size: 22
+  h3_font_size: 18
+  h4_font_size: 13
+  h5_font_size: 10.5
+  h6_font_size: 9
+  line_height: 1.2
+  margin_top: 5
+  margin_bottom: 10
+  part:
+    font_size: 27
+    font_color: 181818
+  chapter:
+    font_size: 27
+    font_color: 181818
+
+title_page:
+  align: center
+  logo:
+    top: 10%
+  title:
+    top: 55%
+    font_size: 27
+    font_color: 181818
+    line_height: 0.9
+  subtitle:
+    font_size: 18
+    font_style: bold_italic
+    line_height: 1
+  authors:
+    margin_top: 13
+    font_size: 13
+    font_color: 181818
+  revision:
+    margin_top: 13
+
+link:
+  font_color: 428bca
+
+outline_list:
+  indent: 16
+  item_spacing: 6
+
+header:
+  font_size: 9
+  font_family: MicrosoftYaHei
+  line_height: 1
+  height: 30
+  vertical_align: middle
+  recto:
+    right:
+      content: '{chapter-title}'
+  verso:
+    left:
+      content: '{document-title}'
+
+footer:
+  font_size: 9
+  font_family: MicrosoftYaHei
+  border_color: dddddd
+  border_width: 0.25
+  height: 30
+  line_height: 1
+  padding: [6, 1, 0, 1]
+  vertical_align: top
+  recto:
+    right:
+      content: '{page-number}'
+  verso:
+    left:
+      content: '{page-number}'
+
+code:
+  font_family: CodeFont
+  font_size: 10
+  padding: 10
+  line_height: 1.25
+  background_color: f5f5f5
+  border_color: cccccc
+  border_radius: 4
+  border_width: 0.75
+
+conum:
+  font_family: CodeFont
+  font_color: 333333
+  font_size: 10.5
+  line_height: 1.33
+
+table:
+  background_color: ffffff
+  head_background_color: f0f0f0
+  head_font_color: 333333
+  head_font_style: bold
+  head_font_family: MicrosoftYaHei
+  body_background_color: ffffff
+  body_stripe_background_color: fafafa
+  foot_background_color: f0f0f0
+  border_color: dddddd
+  border_width: 0.5
+  cell_padding: [3, 3, 6, 3]
+
+thematic_break:
+  border_color: eeeeee
+  border_style: solid
+  border_width: 0.5
+  margin_top: 6
+  margin_bottom: 18
+
+image:
+  align: left
+
+caption:
+  align: left
+  font_style: italic
+  font_family: MicrosoftYaHei
+  margin_inside: 4
+  margin_outside: 0
+
+admonition:
+  column_rule_color: eeeeee
+  column_rule_width: 0.5
+  padding: [0, 12, 0, 12]
+  label:
+    text_transform: uppercase
+    font_style: bold
+    font_family: MicrosoftYaHei
+
+blockquote:
+  font_color: 333333
+  font_size: 13
+  border_color: eeeeee
+  border_width: 5
+  padding: [0, 12, 0, 17]
+  cite_font_size: 9
+  cite_font_color: 999999
+
+literal:
+  font_family: CodeFont
+  font_color: 333333
+  font_size: 10.5
+
+button:
+  font_family: NotoSerif
+  font_color: 333333
+  font_size: 10.5
+
+key:
+  font_family: CodeFont
+  font_color: 333333
+  font_size: 10.5
+  border_color: cccccc
+  border_width: 0.5
+  border_radius: 3
+
+mark:
+  font_color: 333333
+  font_family: NotoSerif
+  background_color: ffff00
+
+menu:
+  font_family: NotoSerif
+  font_color: 333333
+
+kbd:
+  font_family: CodeFont
+  font_color: 333333
+  background_color: f5f5f5
+  border_color: cccccc
+  border_width: 0.5
+  border_radius: 3
+
+prose:
+  margin_top: 0
+  margin_bottom: 12
+
+list:
+  indent: 16
+  item_spacing: 6
+
+description_list:
+  term_font_style: bold
+  term_spacing: 4
+  description_indent: 16
+
+sidebar:
+  background_color: f5f5f5
+  border_color: cccccc
+  border_radius: 4
+  border_width: 0.75
+  padding: [12, 12, 0, 12]
+  title:
+    align: center
+    font_color: 181818
+    font_family: MicrosoftYaHei
+    font_size: 13
+    font_style: bold
+
+example:
+  background_color: ffffff
+  border_color: cccccc
+  border_radius: 4
+  border_width: 0.75
+  padding: [12, 12, 0, 12]
+
+verse:
+  font_family: NotoSerif
+  font_size: 10.5
+  border_color: eeeeee
+  border_width: 5
+  padding: [0, 12, 0, 17]
