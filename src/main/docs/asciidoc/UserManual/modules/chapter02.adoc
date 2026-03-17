@@ -41,7 +41,7 @@
 
 . 安装Java开发工具包（JDK）
 +
-[source,bash]
+[source]
 ----
 # Linux/macOS
 sudo apt install openjdk-11-jdk
@@ -52,7 +52,7 @@ java -version
 
 . 安装MySQL数据库
 +
-[source,bash]
+[source]
 ----
 # Linux
 sudo apt install mysql-server
@@ -65,7 +65,7 @@ sudo systemctl start mysql
 
 从官方网站下载最新版本的安装包：
 
-[source,bash]
+[source]
 ----
 # 使用wget下载
 wget https://example.com/downloads/app-1.0.0.zip
@@ -79,7 +79,7 @@ cd app-1.0.0
 
 创建数据库和用户：
 
-[source,sql]
+[source]
 ----
 -- 创建数据库
 CREATE DATABASE app_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -96,7 +96,7 @@ FLUSH PRIVILEGES;
 
 编辑配置文件 `config/application.properties`：
 
-[source,properties]
+[source]
 ----
 # 数据库配置
 spring.datasource.url=jdbc:mysql://localhost:3306/app_db
@@ -115,7 +115,7 @@ logging.file.name=logs/application.log
 
 运行启动脚本：
 
-[source,bash]
+[source]
 ----
 # Linux/macOS
 ./bin/startup.sh
@@ -144,7 +144,7 @@ bin\startup.bat
 
 如果8080端口已被占用，可以修改配置文件中的端口号：
 
-[source,properties]
+[source]
 ----
 server.port=8081
 ----
@@ -162,7 +162,7 @@ server.port=8081
 
 如果遇到内存不足错误，可以增加JVM堆内存：
 
-[source,bash]
+[source]
 ----
 # 编辑启动脚本，添加JVM参数
 export JAVA_OPTS="-Xms512m -Xmx2048m"
@@ -174,21 +174,21 @@ export JAVA_OPTS="-Xms512m -Xmx2048m"
 
 . 停止应用服务
 +
-[source,bash]
+[source]
 ----
 ./bin/shutdown.sh
 ----
 
 . 删除应用目录
 +
-[source,bash]
+[source]
 ----
 rm -rf /path/to/app
 ----
 
 . （可选）删除数据库
 +
-[source,sql]
+[source]
 ----
 DROP DATABASE app_db;
 DROP USER 'app_user'@'localhost';
