@@ -128,17 +128,17 @@ header:
 footer:
   font_size: 9
   font_family: MicrosoftYaHei
-  border_color: dddddd
-  border_width: 0.25
-  height: 30
+  border_color: 1a5490
+  border_width: 1
+  height: 35
   line_height: 1
   padding: [6, 1, 0, 1]
   vertical_align: top
   recto:
-    right:
+    center:
       content: '{page-number}'
   verso:
-    left:
+    center:
       content: '{page-number}'
 
 code:
