@@ -45,7 +45,7 @@ base:
   font_size_small: 9
   font_size_min: 8
   font_style: normal
-  border_color: eeeeee
+  border_color: e0e0e0
   border_radius: 4
   border_width: 0.5
 
