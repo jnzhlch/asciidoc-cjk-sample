@@ -295,7 +295,6 @@ syntax:
     font_color: 008800
   keyword:
     font_color: 1a5490
-    font_style: bold
   string:
     font_color: 008800
   symbol:
