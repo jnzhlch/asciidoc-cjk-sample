@@ -282,36 +282,19 @@ verse:
   padding: [0, 12, 0, 17]
 
 syntax:
-  hljs:
-    background: f5f5f5
-    color: 333333
-  comment:
-    font_color: 999999
-    font_style: italic
-  comment_preproc:
-    font_color: 999999
-    font_style: italic
-  constant:
-    font_color: 008800
   keyword:
     font_color: 1a5490
   string:
-    font_color: 008800
-  symbol:
-    font_color: 008800
-  subst:
-    font_color: 333333
+    font_color: 2a6f2f
+  comment:
+    font_color: 888888
   function:
-    font_color: 0066cc
-  class:
-    font_color: 008800
+    font_color: 267499
   number:
-    font_color: ff6600
+    font_color: d73a49
+  class:
+    font_color: d73a49
   variable:
-    font_color: 008800
-  regexp:
-    font_color: 0099ff
-  url:
-    font_color: 008800
-  special:
-    font_color: 008800
+    font_color: 2a6f2f
+  constant:
+    font_color: 2a6f2f
