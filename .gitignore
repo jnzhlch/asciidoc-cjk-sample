@@ -26,6 +26,7 @@ Thumbs.db
 # target/generated-docs/
 
 # Font files (too large for git - users should download separately)
-src/main/resources/fonts/*.ttf
 src/main/resources/fonts/*.ttc
 src/main/resources/fonts/*.otf
+# Exception: NotoSerifSC-VF.ttf is included
+!src/main/resources/fonts/NotoSerifSC-VF.ttf
