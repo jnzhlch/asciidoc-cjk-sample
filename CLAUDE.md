@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Maven-based AsciiDoc documentation generation project that produces HTML5 and PDF outputs with full Chinese (CJK) language support. It uses AsciidoctorJ for document conversion and includes custom CJK themes for proper Chinese typography.
+Maven-based AsciiDoc documentation generation project with full Chinese (CJK) language support. Produces HTML5 and PDF outputs using AsciidoctorJ with custom CJK themes for proper Chinese typography.
+
+**Repository**: https://github.com/jnzhlch/asciidoc-cjk-sample
 
 ## Build Commands
 
@@ -29,28 +31,27 @@ Output locations:
 ## Architecture
 
 ### Document Structure
-- **Source documents**: `src/main/docs/asciidoc/` - Contains AsciiDoc source files
-- **Modules pattern**: Each document has a main `.adoc` file that includes chapter modules from a `modules/` subdirectory
-- **Resources**: `src/main/resources/` - Contains fonts and PDF themes
-- **Reference materials**: `asciidoc-cjk/` - Contains project templates and reference documentation
+- **Source documents**: `src/main/docs/asciidoc/` - AsciiDoc source files
+- **Modules pattern**: Main `.adoc` file includes chapter modules from `modules/` subdirectory
+- **Resources**: `src/main/resources/` - Fonts and PDF themes
+- **Reference materials**: `asciidoc-cjk/` - Project templates and reference documentation
 
 ### Build System (Maven)
 - **Plugin**: Asciidoctor Maven Plugin 3.2.0
 - **Dependencies**: AsciidoctorJ 3.0.1, AsciidoctorJ PDF 2.3.9
-- **Executions**: Each document requires two Maven executions (HTML + PDF) configured in `pom.xml`
+- **Executions**: Each document requires two Maven executions (HTML + PDF) in `pom.xml`
 
 ### Key Configuration Files
-- [pom.xml](pom.xml) - Maven build configuration with Asciidoctor plugin executions
-- [src/main/resources/themes/cjk-theme.yml](src/main/resources/themes/cjk-theme.yml) - PDF theme for Chinese typography
-- [src/main/docs/asciidoc/UserManual/UserManual.adoc](src/main/docs/asciidoc/UserManual/UserManual.adoc) - Main document entry point
+- [pom.xml](pom.xml) - Maven build configuration
+- [src/main/resources/themes/cjk-theme.yml](src/main/resources/themes/cjk-theme.yml) - PDF theme
+- [src/main/docs/asciidoc/UserManual/UserManual.adoc](src/main/docs/asciidoc/UserManual/UserManual.adoc) - Main document
 
 ### Reference Materials (`asciidoc-cjk/`)
-The `asciidoc-cjk/` directory contains reusable reference materials:
-- `assets/project-template/` - Complete Maven project template for new AsciiDoc projects
-- `references/asciidoc-basics.md` - AsciiDoc syntax quick reference
-- `references/cjk-configuration.md` - CJK font and theme configuration guide
-- `references/maven-setup.md` - Maven AsciidoctorJ plugin configuration patterns
-- `SKILL.md` - Skill definition for AsciiDoc CJK documentation tasks
+- `assets/project-template/` - Maven project template
+- `references/asciidoc-basics.md` - AsciiDoc syntax reference
+- `references/cjk-configuration.md` - CJK font/theme guide
+- `references/maven-setup.md` - Maven configuration patterns
+- `SKILL.md` - Skill definition for AsciiDoc CJK tasks
 
 ### Adding New Documents
 
@@ -64,31 +65,43 @@ To add a new document (e.g., "NewDoc"):
    └── images/
    ```
 
-2. Add two `<execution>` blocks to [pom.xml](pom.xml) (one for HTML, one for PDF). Follow the existing `generate-UserManual-html` and `generate-UserManual-pdf` patterns, updating:
+2. Add two `<execution>` blocks to [pom.xml](pom.xml). Follow `generate-UserManual-html` and `generate-UserManual-pdf` patterns:
    - `<id>`: `generate-NewDoc-html` / `generate-NewDoc-pdf`
-   - `<sourceDirectory>`: Path to new document directory
-   - `<outputDirectory>`: Path for generated output
+   - `<sourceDirectory>`: Path to new document
+   - `<outputDirectory>`: Output path
 
-### Chinese Typography
+## Font Configuration
 
-PDF generation uses a custom CJK theme with:
-- **Primary font**: Noto Serif CJK VF (Variable Font) - `NotoSerifSC-VF.ttf`
-- **Fallback fonts**: Microsoft YaHei family (`msyh.ttc`, `msyhbd.ttc`, `msyhl.ttc`)
-- **Localized labels**: 目录 (TOC), 图 (Figure), 表 (Table), 章 (Chapter), 附录 (Appendix)
-- **Font paths**: `src/main/resources/fonts/`
+### Included Fonts (in repository)
+- `NotoSerifSC-VF.ttf` - Noto Serif SC Variable Font (~57MB)
+- `NotoSerifCJKsc-VF.ttf` - Noto Serif CJK SC Variable Font (~57MB)
 
-Missing fonts will appear as boxes in PDF output. Font files must be placed in the fonts directory.
+### Required Fonts (user must install)
+Microsoft YaHei family for headings and code (excluded from .gitignore):
+- `msyh.ttc` - Microsoft YaHei Regular
+- `msyhbd.ttc` - Microsoft YaHei Bold
+- `msyhl.ttc` - Microsoft YaHei Light
 
-### Language Configuration
-- Documents use `:lang: zh-CN` attribute for proper Chinese hyphenation and localization
-- Document encoding is UTF-8 (configured in `pom.xml`)
+**Windows users**: Fonts pre-installed at `C:\Windows\Fonts\`
+**Other users**: See `src/main/resources/fonts/README.md` for alternatives
 
-### Syntax Highlighting
-- **HTML**: Uses `highlight.js` (browser-based)
-- **PDF**: Uses `rouge` (built-in)
+### Chinese Typography Settings
+- **Primary font**: Noto Serif SC VF
+- **Fallback fonts**: Microsoft YaHei family
+- **Localized labels**: 目录, 图, 表, 章, 附录
+- **Font directory**: `src/main/resources/fonts/`
+
+Missing fonts appear as boxes (□) in PDF output.
+
+## Language Configuration
+- `:lang: zh-CN` for proper Chinese hyphenation
+- UTF-8 encoding (configured in `pom.xml`)
+
+## Syntax Highlighting
+- **HTML**: `highlight.js` (browser-based)
+- **PDF**: `rouge` (built-in)
 
 ## Notes
-
-- No testing framework is configured (this is a pure documentation generation project)
-- No linting/formatting tools configured
-- PDF generation is significantly slower than HTML - use HTML for iterative development
+- No testing framework (pure documentation project)
+- No linting/formatting tools
+- PDF generation is slower than HTML - use HTML for iteration
