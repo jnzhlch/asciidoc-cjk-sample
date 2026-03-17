@@ -118,3 +118,11 @@ spring:
 ====
 请根据实际环境修改配置参数。
 ====
+
+=== 界面展示
+
+image::chapter01/screenshot-01.png[主界面截图,600]
+
+=== 操作流程
+
+image::chapter01/diagram-01.png[操作流程图,600]
