@@ -78,12 +78,15 @@ heading:
 
 title_page:
   align: center
+  background_image: image:cover-bg.png[]
   logo:
-    top: 10%
+    image: images/logo.png
+    top: 8%
+    width: 100px
   title:
-    top: 55%
-    font_size: 27
-    font_color: 181818
+    top: 40%
+    font_size: 32
+    font_color: 1a5490
     line_height: 0.9
   subtitle:
     font_size: 18
