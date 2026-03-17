@@ -24,3 +24,8 @@ Thumbs.db
 
 # Generated docs (optional - uncomment if you don't want to track generated files)
 # target/generated-docs/
+
+# Font files (too large for git - users should download separately)
+src/main/resources/fonts/*.ttf
+src/main/resources/fonts/*.ttc
+src/main/resources/fonts/*.otf
