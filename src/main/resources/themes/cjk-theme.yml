@@ -144,12 +144,12 @@ footer:
 code:
   font_family: CodeFont
   font_size: 10
-  padding: 10
+  font_color: f8f8f2
+  padding: 12
   line_height: 1.25
-  background_color: f5f5f5
-  border_color: cccccc
-  border_radius: 4
-  border_width: 0.75
+  background_color: 2d2d2d
+  border_radius: 6
+  border_width: 0
 
 conum:
   font_family: CodeFont
