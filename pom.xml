@@ -56,9 +56,9 @@
                         </goals>
                         <configuration>
                             <backend>html5</backend>
-                            
                             <sourceDirectory>${project.basedir}/src/main/docs/asciidoc/UserManual</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-docs/UserManual/html</outputDirectory>
+                            <docinfo>shared</docinfo>
                             <attributes>
                                 <imagesdir>../images</imagesdir>
                                 <source-highlighter>highlight.js</source-highlighter>
@@ -67,6 +67,7 @@
                                 <sectanchors>true</sectanchors>
                                 <idprefix/>
                                 <idseparator>-</idseparator>
+                                <mermaid>true</mermaid>
                             </attributes>
                         </configuration>
                     </execution>
