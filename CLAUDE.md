@@ -32,13 +32,13 @@ Output locations:
 
 ### Document Structure
 - **Source documents**: `src/main/docs/asciidoc/` - AsciiDoc source files
-- **Modules pattern**: Main `.adoc` file includes chapter modules from `modules/` subdirectory
+- **Modules pattern**: Main `.adoc` file includes chapter modules via `include::modules/chapterNN.adoc[]`
 - **Resources**: `src/main/resources/` - Fonts and PDF themes
 
 ### Build System (Maven)
-- **Plugin**: Asciidoctor Maven Plugin 3.2.0
-- **Dependencies**: AsciidoctorJ 3.0.1, AsciidoctorJ PDF 2.3.9
-- **Executions**: Each document requires two Maven executions (HTML + PDF) in `pom.xml`
+- **Plugin/dependency versions** are centralized as Maven properties in `pom.xml` (`<properties>` section)
+- Each document requires two `<execution>` blocks in `pom.xml` (HTML + PDF)
+- **Attribute precedence**: `pom.xml` `<attributes>` override attributes set in `.adoc` file headers — the HTML and PDF executions set different values for `toclevels`, `source-highlighter`, `imagesdir`, etc.
 
 ### Key Configuration Files
 - [pom.xml](pom.xml) - Maven build configuration with all Chinese localized labels (章, 图, 表, 附录, etc.)
@@ -86,6 +86,7 @@ Missing fonts appear as boxes (□) in PDF output.
 
 ## Language Configuration
 - `:lang: zh-CN` for proper Chinese hyphenation
+- `scripts: cjk` in PDF execution enables CJK line-breaking rules
 - UTF-8 encoding (configured in `pom.xml`)
 
 ## Syntax Highlighting
@@ -97,6 +98,6 @@ Missing fonts appear as boxes (□) in PDF output.
 - Mermaid diagram support via `:mermaid: true` attribute
 
 ## Notes
-- No testing framework (pure documentation project)
-- No linting/formatting tools
-- PDF generation is slower than HTML - use HTML for iteration
+- No testing framework or linting tools (pure documentation project)
+- PDF generation is slower than HTML — use HTML for rapid iteration
+- Font files (`NotoSerifSC-VF.ttf`, `NotoSerifCJKsc-VF.ttf`) are ~57MB each and tracked in git — shallow clones recommended
